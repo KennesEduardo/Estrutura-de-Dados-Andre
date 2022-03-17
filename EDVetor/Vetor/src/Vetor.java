@@ -19,17 +19,41 @@ public class Vetor {
 		}
 	}
 	*/
-    public void adiciona(String elemento) throws Exception {
+   /* public void adiciona(String elemento) throws Exception {
     	if(tamanho < elementos.length) {
     		elementos[tamanho] = elemento;
     		tamanho++;
     	}else {
-    		throw new Exception("vetor est� cheio");    	
-    		}
+    		throw new Exception("vetor está cheio");    	
     	}
+    }
+	*/
+	//sempre adiciona o elemento no final do vetor
+	public boolean adiciona(String elemento){
+		if(tamanho < elementos.length){
+			elementos[tamanho] = elemento;
+			tamanho++;
+			return true;
+		}
+		return false;
+	}
+	public int tamanho(){
+		return tamanho;
+	}
+
+	//buscando uma possicao e retornando	
+	public String busca(int posicao) throws IllegalAccessException{
+		if(!(posicao >= 0 && posicao < tamanho)){
+			throw new IllegalAccessException("Posição invalida!");
+		}
+		return elementos[posicao];
+	}
+
+	public int
     
 	
 	public String toString(){
+
 		StringBuffer s = new StringBuffer();
 		s.append("[");
 		
