@@ -1,3 +1,4 @@
+import java.nio.file.attribute.FileTime;
 import java.util.Arrays;
 
 public class Vetor {
@@ -49,7 +50,14 @@ public class Vetor {
 		return elementos[posicao];
 	}
 
-	public int
+	public int busca(String elemento){
+		for (int i = 0; i < tamanho; i++){
+			if(elementos[i].equals(elemento)){
+				return i;
+			}
+		}
+		return -1;
+	}
     
 	
 	public String toString(){
