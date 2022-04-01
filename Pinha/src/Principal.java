@@ -2,7 +2,7 @@ public class Principal {
     public static void main(String[] args) throws Exception {
 
         //clinahdo objeto
-        Pilha<String> pilha = new Pilha<>();
+        Pilha<String> pilha = new Pilha<>(3);
 
         System.out.println("----Pilha---");
         pilha.empilhar("A");
@@ -12,9 +12,13 @@ public class Principal {
         pilha.empilhar("F");
         pilha.empilhar("E");
 
-        System.out.println(pilha.topo());
+        System.out.println("Ultimo elemento empilhado foi:" +pilha.topo());
+        System.out.println("O elemento removido da pilha foi:" + pilha.desempilhar());
+        System.out.println("O elemento de topo agora é:" + pilha.topo());
+        pilha.empilhar("Z");
         System.out.println(pilha.toString());
     
     
     }
+
 }
